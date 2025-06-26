@@ -1,5 +1,3 @@
-# exploring-abusive-speech
-
 *** Abstract ***
 
 
