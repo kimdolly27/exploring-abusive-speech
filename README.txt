@@ -24,7 +24,8 @@ exploring__abusive_speech_detection/
 │ ├── prompt-binary-base.py
 │ ├── prompt-binary-CoT.py
 │ ├── prompt-ternary-base.py
-│ └── prompt-ternary-CoT.py
+│ ├── prompt-ternary-CoT.py
+│ └── runall.sh
 ├── analyse_errors.py
 ├── compute_statistics.py
 ├── merge_datasets.py
@@ -52,11 +53,13 @@ Example files:
 train_BERT.py - Train and evaluate BERT and HateBERT on the AbuseEval (+ HIC) dataset. Supports binary and ternary abuse classification.
 
 prompting_experiments/
-These scripts classify tweets for abusive speech detection using a local LLaMA model with one-shot and few-shot prompting. Each script supports different prompting styles, and saves the model’s prediction, and supports evaluation. Arguments for these scripts include:
+These scripts classify tweets for abusive speech detection using a local LLaMA model with one-shot and few-shot prompting. Each script supports different prompting styles, and saves the model’s prediction, and supports evaluation. Script parameters include:
 - 'P1-P4' Zero-shot, one-shot, and few-shot setups
-- 'mode' Prompt strategies
 - 'temp' Temperature
+- 'mode' Prompt strategies
 
+run_all.sh
+    Example script to automate the execution across multiple experimental setups.
 prompt-binary-base.py
     Binary classification (ABU / NOTABU) using basic prompting.
     Modes: base, def
