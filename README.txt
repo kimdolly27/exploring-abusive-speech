@@ -39,7 +39,7 @@ Expected folders:
 - HIC posts: ./data/implicit-hate-corpus/ - https://github.com/SALT-NLP/implicit-hate
 
 *** Model ***
-Note: This prompting_experiments script expects a locally running language model server with an OpenAI-compatible API at http://localhost:8000/v1.
+NOTE: The prompting_experiments scripts expect a locally running language model server with an OpenAI-compatible API at http://localhost:8000/v1.
 
 Model can be downloaded via: https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF
 
@@ -52,11 +52,10 @@ Example files:
 train_BERT.py - Train and evaluate BERT and HateBERT on the AbuseEval (+ HIC) dataset. Supports binary and ternary abuse classification.
 
 prompting_experiments/
-These scripts classify tweets as abusive or not using a local LLaMA model with one-shot and few-shot prompting. Each script supports different prompting styles and saves the model’s prediction, and supports evaluation. Key Features:
-- One-shot and few-shot classification (P1–P4 setups)
-- Optional reasoning-based (CoT) prompting
-- Multiple prompt strategies
-- Saves predictions and can run evaluations
+These scripts classify tweets for abusive speech detection using a local LLaMA model with one-shot and few-shot prompting. Each script supports different prompting styles and saves the model’s prediction, and supports evaluation. Argumentst:
+- 'P1-P4' Zero-shot, one-shot and few-shot setups
+- 'mode' Prompt strategies
+- 'temp' Temperature
 
 prompt-binary-base.py
     Binary classification (ABU / NOTABU) using basic prompting.
