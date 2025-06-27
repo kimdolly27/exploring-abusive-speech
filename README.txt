@@ -52,8 +52,8 @@ Example files:
 train_BERT.py - Train and evaluate BERT and HateBERT on the AbuseEval (+ HIC) dataset. Supports binary and ternary abuse classification.
 
 prompting_experiments/
-These scripts classify tweets for abusive speech detection using a local LLaMA model with one-shot and few-shot prompting. Each script supports different prompting styles and saves the model’s prediction, and supports evaluation. Argumentst:
-- 'P1-P4' Zero-shot, one-shot and few-shot setups
+These scripts classify tweets for abusive speech detection using a local LLaMA model with one-shot and few-shot prompting. Each script supports different prompting styles, and saves the model’s prediction, and supports evaluation. Arguments for these scripts include:
+- 'P1-P4' Zero-shot, one-shot, and few-shot setups
 - 'mode' Prompt strategies
 - 'temp' Temperature
 
