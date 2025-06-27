@@ -1,5 +1,12 @@
-*** Title and Abstract ***
+*** Exploring Implicit Abusive Speech Detection: A Comprehensive Analysis of Fine-Tuning BERT and Prompting Qwen2.5 ***
 
+*** Abstract ***
+
+Online content has become a significant part of our daily lives. This development made detecting abusive speech important for the overall well-being of society. One of the challenges in detecting abusive speech involves the nuanced and implicit ways in which it can be expressed. Since the early 2010s, researchers have made several attempts to tackle the detection of abusive forms of speech, with recent work showing promising results for transformer-based models and generative large language models (LLMs).
+
+In this research, I aim to contribute to the detection of abusive speech by answering the question of whether prompt engineering offers advantages over a fine-tuned BERT model, particularly in identifying implicit cases of abusive speech. I conduct two main experiments — fine-tuning BERT-based models and prompting Qwen2.5 — across both binary (abusive vs. not abusive) and ternary (explicit abuse, implicit abuse, not abusive) classification tasks, and evaluate the performances on the AbuseEval test set. Finally, I conduct a thorough error analysis to examine how errors, and in particular mistakes in implicit abusive speech, affect the model’s results.
+
+The results show that fine-tuning still delivered better overall performance, achieving a macro-averaged F1-score of 0.60, with 0.29 for implicit cases. The best-performing prompting strategy combined Chain-of-Thought (CoT) with considering targetness, reaching a macro-averaged F1-score of 0.52, with 0.25 in the implicit class. The error analysis revealed that helping the model understand the boundary between explicit and implicit abuse, and implicit and non-abusive, through improving understanding of the target and the context within tweets, is key in reducing misclassification in abusive speech, particularly in implicit cases.
 
 *** Author ***
 K.D. Gerritsen
@@ -33,7 +40,7 @@ Expected folders:
 - HIC posts: ./data/implicit-hate-corpus/ - https://github.com/SALT-NLP/implicit-hate
 
 *** Model ***
-Note: This prompting_experiments script expect a locally running language model server with an OpenAI-compatible API at http://localhost:8000/v1.
+Note: This prompting_experiments script expects a locally running language model server with an OpenAI-compatible API at http://localhost:8000/v1.
 
 Model can be downloaded via: https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF
 
