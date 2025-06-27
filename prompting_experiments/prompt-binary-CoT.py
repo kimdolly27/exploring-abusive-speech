@@ -2,7 +2,7 @@
 Run binary abuse classification (ABU / NOTABU) using one and few-shot prompting.
 
 Uses a local LLaMA model (via OpenAI API interface) to classify tweets based on prompt-guided reasoning.
-Supports multiple shots setups (P1–P4) and prompt modes ('standard', 'targeted', or 'IHC_labels').
+Supports multiple shot setups (P1–P4) and prompt modes ('standard', 'targeted', or 'IHC_labels').
 Saves model predictions and optionally evaluates them.
 """
 
