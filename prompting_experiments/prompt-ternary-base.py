@@ -2,7 +2,7 @@
 Run ternary abuse classification (EXP / IMP / NOTABU) using one and few-shot prompting.
 
 Uses a local LLaMA model (via OpenAI API interface) to classify tweets based on prompt.
-Supports multiple few-shot setups (P1–P4) and prompt modes ('base' or 'def').
+Supports multiple shots setups (P1–P4), prompt modes ('base' or 'def'), and temperatures ('temp').
 Saves model predictions and optionally evaluates them.
 """
 
